@@ -1,0 +1,131 @@
+/* tags */
+/* ---- */
+
+/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/13 */
+.tag {
+  background-color: var(--text-accent);
+  border: none;
+  color: white;
+  font-size: 11px;
+  padding: 1px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 0px;
+  cursor: pointer;
+  border-radius: 14px;
+}
+.tag:hover {
+  color: white;
+  background-color: var(--text-accent-hover);
+}
+.tag[href^="#obsidian"] {
+  background-color: #4d3ca6;
+}
+.tag[href^="#important"] {
+  background-color: red;
+}
+
+/* auto fading */
+/* ----------- */
+
+/* note top bar controls */
+/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/10 */
+.view-header:not(:hover) .view-actions {
+  opacity: 0.1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+/* status bar */
+/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/10 */
+.status-bar:not(:hover) .status-bar-item {
+  opacity: 0.25;
+  transition: opacity 0.25s ease-in-out;
+}
+
+/* embeds */
+/* ------ */
+
+/* Remove embed yaml front matter */
+.markdown-embed-content > .language-yaml {
+  display: none;
+}
+
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed {
+  margin: 0;
+  padding: 10px 20px 15px 20px;
+}
+
+/* mark */
+/* ---- */
+
+.theme-light .markdown-preview-view mark {
+  background-color: #fcf8e3;
+}
+
+.theme-dark .markdown-preview-view mark {
+  background-color: #404000;
+}
+
+/* blockquotes */
+/* ----------- */
+
+.markdown-preview-view blockquote {
+  margin: 0;
+  border: 0;
+  border-left: 3px solid var(--background-modifier-border);
+  padding: 5px 0 5px 15px;
+}
+
+.markdown-preview-view blockquote > p {
+  margin: 0.5em 0;
+}
+
+.markdown-preview-view blockquote > p:first-child {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.markdown-preview-view blockquote > p:last-child {
+  margin-bottom: 0;
+  margin-top: 0.5em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* checkboxes                                        */
+/* https://forum.obsidian.md/t/nicer-checkboxes/2238 */
+/* ------------------------------------------------- */
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid var(--text-faint);
+  padding: 0;
+}
+
+input[type="checkbox"]:focus {
+  outline: 0;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--text-accent-hover);
+  border: 1px solid var(--text-accent-hover);
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+}
+
+.markdown-preview-view .task-list-item-checkbox {
+  margin-left: -25px;
+  top: 5px;
+}
+
+.markdown-preview-view .task-list-item {
+  padding-inline-start: 25px;
+}
