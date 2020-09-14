@@ -75,7 +75,7 @@
   margin: 0;
   border: 0;
   border-left: 3px solid var(--background-modifier-border);
-  padding: 5px 0 5px 15px;
+  padding: 0 0 0 15px;
 }
 
 .markdown-preview-view blockquote > p {
