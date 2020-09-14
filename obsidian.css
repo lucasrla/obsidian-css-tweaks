@@ -74,7 +74,7 @@
 .markdown-preview-view blockquote {
   margin: 0;
   border: 0;
-  border-left: 3px solid var(--background-modifier-border);
+  border-left: 5px solid var(--background-modifier-border);
   padding: 0 0 0 15px;
 }
 
