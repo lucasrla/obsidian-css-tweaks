@@ -1,7 +1,7 @@
 /* tags */
 /* ---- */
-
 /* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/13 */
+
 .tag {
   background-color: var(--text-accent);
   border: none;
@@ -28,16 +28,15 @@
 
 /* auto fading */
 /* ----------- */
+/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/10 */
 
 /* note top bar controls */
-/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/10 */
 .view-header:not(:hover) .view-actions {
   opacity: 0.1;
   transition: opacity 0.25s ease-in-out;
 }
 
 /* status bar */
-/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/10 */
 .status-bar:not(:hover) .status-bar-item {
   opacity: 0.25;
   transition: opacity 0.25s ease-in-out;
@@ -45,16 +44,19 @@
 
 /* embeds */
 /* ------ */
+/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/41 */
 
 /* Remove embed yaml front matter */
 .markdown-embed-content > .language-yaml {
   display: none;
 }
 
+/* Tigher padding, no margins, no borders */
 .markdown-preview-view .markdown-embed,
 .markdown-preview-view .file-embed {
   margin: 0;
-  padding: 10px 20px 15px 20px;
+  padding: 20px 5px;
+  border: 0;
 }
 
 /* mark */
@@ -97,14 +99,15 @@
 }
 
 /* checkboxes                                        */
-/* https://forum.obsidian.md/t/nicer-checkboxes/2238 */
 /* ------------------------------------------------- */
+/* https://forum.obsidian.md/t/nicer-checkboxes/2238 */
+/* https://forum.obsidian.md/t/style-checkboxes/1199 */
 
 input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
   border-radius: 50%;
-  border: 1px solid var(--text-faint);
+  border: 1px solid var(--background-modifier-border);
   padding: 0;
 }
 
@@ -113,8 +116,9 @@ input[type="checkbox"]:focus {
 }
 
 input[type="checkbox"]:checked {
-  background-color: var(--text-accent-hover);
-  border: 1px solid var(--text-accent-hover);
+  /* background-color: var(--background-primary); #7f6df2 */
+  /* border: 1px solid var(--text-accent); #7f6df2 */
+  color: var(--text-normal);
   background-position: center;
   background-size: 70%;
   background-repeat: no-repeat;
@@ -128,4 +132,16 @@ input[type="checkbox"]:checked {
 
 .markdown-preview-view .task-list-item {
   padding-inline-start: 25px;
+}
+
+/* links */
+/* ----- */
+
+.markdown-preview-view .internal-link {
+  text-decoration: none;
+}
+
+.markdown-preview-view .external-link {
+  background: none;
+  padding-right: 0;
 }
