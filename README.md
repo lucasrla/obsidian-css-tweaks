@@ -4,10 +4,11 @@ I have tested them in versions up to `0.9.6`.
 
 Tweaks that I have done myself:
 
-- Cleaner links: use different colors for internal and external links, remove ![](https://publish.obsidian.md/public/images/fdc86034ba18de3558c8fa414a58f9e8.svg) image from external ones
+- Cleaner external links: remove the ![](https://publish.obsidian.md/public/images/fdc86034ba18de3558c8fa414a58f9e8.svg) image
 - Cleaner blockquotes: a vertical line instead of a closed box
-- Cleaner embeds: tigher padding, no margins, no borders
-- Better colors for `<mark>` tag: both in light and dark themes
+- Cleaner embeds: no margins, no borders, just some padding
+- Alternative way to distinguish internal vs external links: remove underline from internal links
+- Alternative coloring for the `<mark>` tag both in light and dark themes
 
 Features that I have gotten from others:
 
