@@ -1,4 +1,4 @@
-[CSS snippet](https://forum.obsidian.md/t/obsidian-release-v0-9-18-insider-build/9063) with minimal tweaks and fixes to [Obsidian](https://obsidian.md)'s Appearance. I have tested them in versions up to `0.9.19`.
+[CSS snippet](https://forum.obsidian.md/t/obsidian-release-v0-9-18-insider-build/9063) with minimal tweaks and fixes to [Obsidian](https://obsidian.md)'s Appearance. I have tested them in versions up to `0.12.3`.
 
 ## Overview
 
