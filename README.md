@@ -1,10 +1,10 @@
-[CSS snippet](https://forum.obsidian.md/t/obsidian-release-v0-9-18-insider-build/9063) with minimal tweaks and fixes to [Obsidian](https://obsidian.md)'s Appearance. I have tested them in versions up to `0.12.3`.
+[CSS snippet](https://forum.obsidian.md/t/obsidian-release-v0-9-18-insider-build/9063) with minimal tweaks and fixes to [Obsidian](https://obsidian.md)'s Appearance. I have tested them in versions up to `0.12.4`.
 
 ## Overview
 
 Tweaks that I have written myself:
 
-- Cleaner external links: remove the ![](https://publish.obsidian.md/public/images/fdc86034ba18de3558c8fa414a58f9e8.svg) image
+- Cleaner external links: remove the external link image (<?xml version="1.0" encoding="utf-8"?><svg xmlns='http://www.w3.org/2000/svg' class='i-external' viewBox='0 0 32 32' width='14' height='14' fill='none' stroke='#888888' stroke-linecap='round' stroke-linejoin='round' stroke-width='9.38%'><path d='M14 9 L3 9 3 29 23 29 23 18 M18 4 L28 4 28 14 M28 4 L14 18'/></svg>)
 - Cleaner blockquotes: a vertical line instead of a closed box
 - Cleaner embeds: no margins, no borders, just some padding
 - Alternative way to distinguish internal vs external links: remove underline from internal links
