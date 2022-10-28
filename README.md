@@ -1,4 +1,4 @@
-My opinionated tweaks to [Obsidian](https://obsidian.md)'s theme, [Minimal](https://github.com/kepano/obsidian-minimal) by [kepano](https://github.com/kepano).
+My opinionated tweaks to [Obsidian](https://obsidian.md)'s theme [Minimal (@kepano/obsidian-minimal)](https://github.com/kepano/obsidian-minimal).
 
 I'm using these [CSS snippets](https://help.obsidian.md/How+to/Add+custom+styles#Use+Themes+and+or+CSS+snippets) in Obsidian `1.0.3` with Minimal theme `6.1.9`.
 
@@ -27,4 +27,4 @@ If there is no `obsidian-minimal-tweaks` in step #3, you might need to click on 
 
 ## More resources
 
-If you are looking for more CSS snippets, check out this [forum thread](https://forum.obsidian.md/t/meta-post-common-css-hacks) and also [@kmaasrud/awesome-obsidian](https://github.com/kmaasrud/awesome-obsidian). Thanks, Obsidian community!
+If you're looking for more CSS snippets, check out this [Obsidian forum thread](https://forum.obsidian.md/t/meta-post-common-css-hacks) and also [@kmaasrud/awesome-obsidian](https://github.com/kmaasrud/awesome-obsidian). Thanks, Obsidian community!
