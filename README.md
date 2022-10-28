@@ -1,21 +1,20 @@
-[CSS snippet](https://forum.obsidian.md/t/obsidian-release-v0-9-18-insider-build/9063) with minimal tweaks and fixes to [Obsidian](https://obsidian.md)'s Appearance. I have tested them in versions up to `0.12.4`.
+My opinionated tweaks to [Obsidian](https://obsidian.md)'s theme, [Minimal](https://github.com/kepano/obsidian-minimal) by [kepano](https://github.com/kepano).
 
-## Overview
+I'm using these [CSS snippets](https://help.obsidian.md/How+to/Add+custom+styles#Use+Themes+and+or+CSS+snippets) in Obsidian `1.0.3` with Minimal theme `6.1.9`.
 
-Tweaks that I have written myself:
 
-- Cleaner external links: remove the external link image (<?xml version="1.0" encoding="utf-8"?><svg xmlns='http://www.w3.org/2000/svg' class='i-external' viewBox='0 0 32 32' width='14' height='14' fill='none' stroke='#888888' stroke-linecap='round' stroke-linejoin='round' stroke-width='9.38%'><path d='M14 9 L3 9 3 29 23 29 23 18 M18 4 L28 4 28 14 M28 4 L14 18'/></svg>)
-- Cleaner blockquotes: a vertical line instead of a closed box
-- Cleaner embeds: no margins, no borders, just some padding
-- Alternative way to distinguish internal vs external links: remove underline from internal links
-- Alternative coloring for the `<mark>` tag both in light and dark themes
+## List of tweaks
 
-Features that I have gotten from others:
+- Text font: "Helvetica Neue" as primary text font
+- Line height: increase it slightly (from 1.5 to 1.6)
+- Embeds: wider; no borders, just some padding and vertical space for the title
+- Highlights: alternative background color both in light and dark themes
+- Blockquotes: subtler left border, alternative text color, increased margins
+- External links: remove the SVG image (<img src="https://user-images.githubusercontent.com/1920195/198417807-298c819e-35a7-45de-9da8-de4caac7a9e2.svg">)
+- Internal links: remove underline (to make them distinguishable from external links)
+- Horizontal rule (`<hr>`): just three subtle dots, instead of a thick and wide line
+- Footnotes: more vertical space between items, more left space between footnote content and the backref link (↩︎)
 
-- [Good-looking checkboxes](https://forum.obsidian.md/t/nicer-checkboxes/2238)
-- [Pills for tags](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/13)
-- [On/off auto fading for UI controls](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/10)
-- [Cleaner embeds by removing YAML's front matter](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/41)
 
 ## Setup
 
@@ -23,7 +22,8 @@ Features that I have gotten from others:
 2. Open the Obsidian app
 3. Navigate to `Settings` > `Appearance` > `CSS snippets` and toggle `obsidian-minimal-tweaks` to ON
 
-If there is no `obsidian-minimal-tweaks` in step #3, you might need to click on the button that `Reload snippets`.
+If there is no `obsidian-minimal-tweaks` in step #3, you might need to click on the "refresh" button to `Reload snippets`.
+
 
 ## More resources
 

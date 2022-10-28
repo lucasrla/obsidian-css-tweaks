@@ -1,146 +1,116 @@
-/* tags */
-/* ---- */
-/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/13 */
+/* text font */
+/* --------- */
 
-.tag {
-  background-color: var(--text-accent);
-  border: none;
-  color: white;
-  font-size: 11px;
-  padding: 1px 8px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 0px 0px;
-  cursor: pointer;
-  border-radius: 14px;
-}
-.tag:hover {
-  color: white;
-  background-color: var(--text-accent-hover);
-}
-.tag[href^="#obsidian"] {
-  background-color: #4d3ca6;
-}
-.tag[href^="#important"] {
-  background-color: red;
+/* It seems possible to set the text font within either `Appeareance > Font` or `Minimal Theme Settings` > `Typography`, but I'd rather do it here together with my other tweaks */
+body.minimal-theme .markdown-preview-view, 
+body.minimal-theme .markdown-source-view {
+  --font-text: "Helvetica Neue", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif !important;
 }
 
-/* auto fading */
+
+/* line height */
 /* ----------- */
-/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/10 */
 
-/* note top bar controls */
-.view-header:not(:hover) .view-actions {
-  opacity: 0.1;
-  transition: opacity 0.25s ease-in-out;
+/* Apparently it is possible to set the text font within `Minimal Theme Settings` > `Typography`, but I'd rather do it here together with my other tweaks */
+body.minimal-theme .markdown-preview-view, 
+body.minimal-theme .markdown-source-view {
+  --line-height: 1.6 !important;
 }
 
-/* status bar */
-.status-bar:not(:hover) .status-bar-item {
-  opacity: 0.25;
-  transition: opacity 0.25s ease-in-out;
-}
 
 /* embeds */
 /* ------ */
-/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/41 */
 
-/* Remove embed yaml front matter */
-.markdown-embed-content > .language-yaml {
-  display: none;
-}
-
-/* Tigher padding, no margins, no borders */
 .markdown-preview-view .markdown-embed,
 .markdown-preview-view .file-embed {
-  margin: 0;
-  padding: 20px 5px;
+  padding: 1em 0;
   border: 0;
 }
 
-/* mark */
-/* ---- */
-
-.theme-light .markdown-preview-view mark {
-  background-color: #fcf8e3;
+.file-embed-link, .markdown-embed-link {
+  top: 1em;
 }
 
-.theme-dark .markdown-preview-view mark {
-  background-color: #404000;
+.markdown-embed-title {
+  margin-bottom: 1em;
 }
+
+.markdown-reading-view .markdown-preview-view:not(.is-readable-line-width)>.markdown-preview-sizer {
+  max-width: 95%;
+}
+
+
+/* text highlights */
+/* --------------- */
+
+.theme-dark {
+  --text-highlight-bg: #404000;
+}
+
+.theme-light {
+  --text-highlight-bg: #fcf8e3;
+}
+
 
 /* blockquotes */
 /* ----------- */
 
-.markdown-preview-view blockquote {
-  margin: 0;
-  border: 0;
-  border-left: 5px solid var(--background-modifier-border);
-  padding: 0 0 0 15px;
+.theme-dark, .theme-light {
+  --blockquote-color: --text-normal;
 }
 
-.markdown-preview-view blockquote > p {
-  margin: 0.5em 0;
+.markdown-source-view blockquote,
+.markdown-preview-view blockquote {
+  border-left: 1px solid var(--background-modifier-border);
+  padding: 0 0 0 1em;
 }
 
 .markdown-preview-view blockquote > p:first-child {
-  margin-bottom: 0.5em;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
+  margin-top: 1em;
 }
 
 .markdown-preview-view blockquote > p:last-child {
-  margin-bottom: 0;
-  margin-top: 0.5em;
-  margin-left: 0;
-  margin-right: 0;
+  margin-bottom: 1.5em;
 }
 
-/* checkboxes                                        */
-/* ------------------------------------------------- */
-/* https://forum.obsidian.md/t/nicer-checkboxes/2238 */
-/* https://forum.obsidian.md/t/style-checkboxes/1199 */
-
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 50%;
-  border: 1px solid var(--background-modifier-border);
-  padding: 0;
-}
-
-input[type="checkbox"]:focus {
-  outline: 0;
-}
-
-input[type="checkbox"]:checked {
-  /* background-color: var(--background-primary); #7f6df2 */
-  /* border: 1px solid var(--text-accent); #7f6df2 */
-  color: var(--text-normal);
-  background-position: center;
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
-}
-
-.markdown-preview-view .task-list-item-checkbox {
-  top: 5px;
-}
-
-.markdown-preview-view ul.contains-task-list {
-  padding-inline-start: 35px;
-}
 
 /* links */
 /* ----- */
 
-.markdown-preview-view .internal-link {
+.internal-link {
   text-decoration: none;
 }
 
-.markdown-preview-view .external-link {
+.external-link {
   background: none;
   padding-right: 0;
+}
+
+
+/* hr, horizontal rules */
+/* -------------------- */
+/* inspired by https://codepen.io/andrewmowe/details/gwbNrK */
+
+.markdown-source-view hr,
+.markdown-preview-view hr {
+  border: 0;
+  text-align: center;
+}
+
+.markdown-source-view hr:before,
+.markdown-preview-view hr:before {
+  content: "· · ·";
+  color: var(--text-muted);
+}
+
+
+/* footnotes */
+/* --------- */
+
+.markdown-preview-view section.footnotes ol li {
+  margin-bottom: 0.5em;
+}
+
+.markdown-preview-view section.footnotes a.footnote-backref {
+  margin-left: 0.25em;
 }
